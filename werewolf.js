@@ -1,12 +1,16 @@
 let tanya = true;
 while(tanya){
     let nama = prompt("Masukkan Nama Anda!");
-    if (nama == ""){
+    while (nama == ""){
         alert("Masukkan Nama Anda!")
-    }  
-    let peran = prompt("masukkan peran anda : penyihir, guard atau werewolf");
-    if(peran==""){
+        nama = prompt("Masukkan Nama Anda!");
+        alert("Halo "+ nama + " selamat datang di game werewolf")
+    }
+
+    let peran = prompt("Masukkan peran anda : penyihir, guard atau werewolf");                                                                                                                     
+    while (peran==""){
         alert("Piih peranmu untuk memulai game!")
+        peran = prompt("Masukkan peran anda : penyihir, guard atau werewolf")
     }
     
     let komputer = Math.random();
@@ -32,6 +36,6 @@ while(tanya){
         hasil = ("Masukkan peran yang benar!");
     }
     alert("anda memilih " + peran + " dan komputer memilih " + komputer + " maka anda " + hasil);
-    tanya = confirm("lagi?");
+    tanya = confirm("Main lagi?");
 }
-alert("hatur nuhun");
+alert("hatur nuhun sudah bermain game werewolf");
